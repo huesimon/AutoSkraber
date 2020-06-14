@@ -1,0 +1,10 @@
+[0614/174047.284:ERROR:process_reader_win.cc(151)] SuspendThread: Adgang nægtet. (0x5)
+[0614/174047.285:ERROR:process_reader_win.cc(151)] SuspendThread: Adgang nægtet. (0x5)
+[0614/174047.285:ERROR:process_reader_win.cc(123)] NtOpenThread: {Adgang nægtet} En proces har anmodet om adgang til et objekt, men har ikke fået disse rettigheder. (0xc0000022)
+[0614/174047.285:ERROR:exception_snapshot_win.cc(98)] thread ID 1556 not found in process
+[0614/174047.338:ERROR:process_reader_win.cc(151)] SuspendThread: Adgang nægtet. (0x5)
+[0614/174047.338:ERROR:process_reader_win.cc(151)] SuspendThread: Adgang nægtet. (0x5)
+[0614/174047.338:ERROR:process_reader_win.cc(151)] SuspendThread: Adgang nægtet. (0x5)
+[0614/174047.338:ERROR:process_reader_win.cc(151)] SuspendThread: Adgang nægtet. (0x5)
+[0614/174047.341:ERROR:process_reader_win.cc(123)] NtOpenThread: {Adgang nægtet} En proces har anmodet om adgang til et objekt, men har ikke fået disse rettigheder. (0xc0000022)
+[0614/174047.342:ERROR:exception_snapshot_win.cc(98)] thread ID 13944 not found in process
