@@ -7,6 +7,7 @@ class AutoSkraber():
 
     def __init__(self):
         self.driver = webdriver.Chrome('driver/chromedriver.exe')
+        self.driver.set_window_size(300, 300)
 
     def login(self):
         self.driver.get('https://skrab.circlek.one/')
@@ -30,7 +31,7 @@ class AutoSkraber():
         tosBtn.click()
 
         phoneNumberInput = self.driver.find_element_by_xpath('/html/body/div[3]/div/div[2]/div/div[3]/div/form/div[3]/input')
-        phoneNumberInput.send_keys('45127001')
+        phoneNumberInput.send_keys('99994999')
 
         startBtn = self.driver.find_element_by_xpath('/html/body/div[3]/div/div[2]/div/div[3]/div/form/input')
         startBtn.click()
@@ -51,13 +52,13 @@ class AutoSkraber():
         drawing = ActionChains(self.driver)\
             .click_and_hold(canvas)\
             .move_by_offset(0, 0)\
-            .move_by_offset(250, 0)\
-            .move_by_offset(0, -250)\
-            .move_by_offset(-500,0 )\
-            .move_by_offset(0, 500 )\
-            .move_by_offset(500, 0 )\
-            .move_by_offset(0, -200 )\
-            .move_by_offset(-400, 0 )\
+            .move_by_offset(50, 0)\
+            .move_by_offset(0, 50)\
+            .move_by_offset(0, -100)\
+            .move_by_offset(-100, 0)\
+            .move_by_offset(0, 100)\
+            .move_by_offset(50, 0)\
+            .move_by_offset(0, -100)\
             .release()
         drawing.perform()
         print(canvas)
