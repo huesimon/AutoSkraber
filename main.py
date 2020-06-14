@@ -9,7 +9,20 @@ class AutoSkraber():
         self.driver = webdriver.Chrome('driver/chromedriver.exe')
         self.driver.set_window_size(300, 300)
 
-    def login(self):
+
+    def logout(self):
+        menuBtn = self.driver.find_element_by_xpath('/html/body/div[3]/div/div[1]/div/div')
+        menuBtn.click()
+
+        sleep(1)
+
+        logoutBtn = self.driver.find_element_by_xpath('/html/body/div[4]/div/div[2]/div[4]/div[4]')
+        logoutBtn.click()
+
+        sleep(5)
+        
+
+    def login(self, number):
         self.driver.get('https://skrab.circlek.one/')
 
         cookieBtn = self.driver.find_element_by_class_name("bm-button")
@@ -31,7 +44,7 @@ class AutoSkraber():
         tosBtn.click()
 
         phoneNumberInput = self.driver.find_element_by_xpath('/html/body/div[3]/div/div[2]/div/div[3]/div/form/div[3]/input')
-        phoneNumberInput.send_keys('99994999')
+        phoneNumberInput.send_keys(number)
 
         startBtn = self.driver.find_element_by_xpath('/html/body/div[3]/div/div[2]/div/div[3]/div/form/input')
         startBtn.click()
@@ -63,12 +76,17 @@ class AutoSkraber():
         drawing.perform()
         print(canvas)
         print('hello')
+        sleep(1)
+
+        self.logout()
 
         
         
-        sleep(500)
         
 
 autoSkraber = AutoSkraber()
+phoneNumbers = ['12178888', '21998887']
+for number in phoneNumbers:
+    autoSkraber.login(number)
 
-autoSkraber.login()
+
